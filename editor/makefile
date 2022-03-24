@@ -2,6 +2,8 @@ CC = g++
 FLAG = -O2 -lwiringPi -lwiringPiDev
 all:bin/example bin/off_example bin/breathe_example bin/color_test bin/part_test
 
+mkdir -p bin obj
+
 ./obj/LED_strip.o: ./src/LED_strip.cpp ./lib/LED_strip.h
 	$(CC) $(FLAG) -c ./src/LED_strip.cpp -o ./obj/LED_strip.o
 
